@@ -1,0 +1,68 @@
+/* admin-dashboard.component.css */
+
+div {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    padding: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Styling for pagination controls */
+  div > button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Optional: Add hover effect to buttons */
+  div > button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Optional: Style selected checkboxes */
+  input[type="checkbox"]:checked {
+    background-color: #007bff;
+  }
+  
+  /* Optional: Style Edit and Delete buttons */
+  button[routerLink="edit"] {
+    background-color: #28a745;
+  }
+  
+  button[routerLink="edit"]:hover {
+    background-color: #218838;
+  }
+  
+  button:not([routerLink="edit"]):not([disabled]) {
+    background-color: #dc3545;
+  }
+  
+  button:not([routerLink="edit"]):not([disabled]):hover {
+    background-color: #c82333;
+  }
+  
