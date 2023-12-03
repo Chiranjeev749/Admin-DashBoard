@@ -11,11 +11,9 @@ export class EditDashboardComponent {
   @Output() save = new EventEmitter<any>();
   @Output() cancel = new EventEmitter<void>();
 
-  // Create a copy of the original user to avoid modifying the original user object
   originalUser: any;
 
   ngOnInit(): void {
-    // Initialize originalUser with a copy of the user object
     this.originalUser = { ...this.user };
   }
 
@@ -24,7 +22,6 @@ export class EditDashboardComponent {
   }
 
   cancelEdit(): void {
-    // Reset user to its original state
     this.user = { ...this.originalUser };
     this.cancel.emit();
   }

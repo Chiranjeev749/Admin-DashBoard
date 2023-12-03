@@ -1,9 +1,12 @@
-<!-- admin-dashboard.component.html -->
 <div>
+    <app-input-search-panel [searchList]="searchList" (selectionChanged)="onSelect($event)" (InputValue)="searchTitle($event)">
+    </app-input-search-panel>
+  </div>
+  <div>
     <table>
       <thead>
         <tr>
-          <th><input type="checkbox" (change)="toggleSelectAll()" /></th>
+          <th><input type="checkbox" (click)="toggleSelectAllOnPage()" [checked]="areAllSelectedOnPage()" /></th>
           <th>Name</th>
           <th>Email</th>
           <th>Role</th>
@@ -24,11 +27,8 @@
       </tbody>
     </table>
   
-    <!-- Pagination controls -->
     <div>
       <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
       Page {{ currentPage }}
       <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage * pageSize >= getFilteredUsers().length">Next</button>
     </div>
-  </div>
-  

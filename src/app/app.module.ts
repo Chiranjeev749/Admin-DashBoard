@@ -8,13 +8,15 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { FormsModule } from '@angular/forms';
 import { EditDashboardComponent } from './edit-dashboard/edit-dashboard.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms';
+import { InputSearchPanelComponent } from './input-search-panel/input-search-panel.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminDashboardComponent,
     EditDashboardComponent,
+    InputSearchPanelComponent,
   ],
   imports: [
     BrowserModule,

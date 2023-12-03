@@ -1,4 +1,3 @@
-<!-- edit-dashboard.component.html -->
 <div>
   <h2>Edit User</h2>
   <form>
@@ -11,7 +10,6 @@
     <label for="role">Role:</label>
     <input type="text" id="role" [(ngModel)]="user.role" name="role" required>
 
-    <!-- Add more input fields for other user details -->
 
     <button type="button" (click)="saveEdit()">Save</button>
     <button routerLink="" type="button" (click)="cancelEdit()">Cancel</button>
